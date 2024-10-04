@@ -1,0 +1,1 @@
+write an json, to save the graph and show it with pygame 
