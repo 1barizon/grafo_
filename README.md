@@ -1,11 +1,11 @@
 como usar o C++
 
-no terminal:  \n
+no terminal:  \
 
-mkdir build \n
-cd build \n
-cmake .. \n
-cmake --build . \n
-cd Debug \n
-./grafos \n
+mkdir build  \
+cd build  \
+cmake ..  \
+cmake --build .  \
+cd Debug  \
+./grafos  \
 
