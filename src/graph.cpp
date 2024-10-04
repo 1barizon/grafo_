@@ -18,14 +18,14 @@ graph::graph(int nodes, int edges_probability) : nodes(nodes), edges_probability
         int value = dis_values(gen);
         node_list[i].value = value;
 
-        for (int j = 0; j < n_neighbors; j++) {
+
+        while(neighbor_set.size() < n_neighbors){
             int neighbor = dis(gen);
-            while (neighbor == i) {
-                neighbor = dis(gen);
+            if(neighbor != i){
+                neighbor_set.insert(neighbor);
             }
-            neighbor_set.insert(neighbor);
         }
-        node_list[i].neighbors = std::vector<int>(neighbor_set.begin(), neighbor_set.end());
+        node_list[i].neighbors.assign(neighbor_set.begin(), neighbor_set.end());
     }
 }
 
